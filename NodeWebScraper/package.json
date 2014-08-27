@@ -1,0 +1,15 @@
+{
+  "name": "NodeScraper",
+  "version": "0.0.1",
+  "description": "Node scraper",
+  "main": "main.js",
+  "author": {
+    "name": "Matt Gibbs",
+    "email": "mtgibbs21@gmail.com"
+  },
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "express": "^3.16.7",
+    "request": "^2.40.0"
+  }
+}
