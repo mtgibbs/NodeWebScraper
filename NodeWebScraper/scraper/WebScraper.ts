@@ -11,7 +11,6 @@ export class WebScraper {
     }
 
     public scrape() {
-
         var req = request(this._targetUrl, (error, response, html) => {
             if (!error) {
                 this.doWork(response, html);

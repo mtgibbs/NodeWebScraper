@@ -21,7 +21,7 @@ class SearchItem {
 class CowboomScraper extends scraper.WebScraper {
 
     constructor(searchKeywords) {
-         var searchParams = encodeURIComponent(searchKeywords);
+        var searchParams = encodeURIComponent(searchKeywords);
         var url = 'http://www.cowboom.com/search/results.cfm?keywords=' + searchParams;
         super(url);
     }
