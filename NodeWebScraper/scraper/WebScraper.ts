@@ -21,7 +21,7 @@ export module Scraper {
                     this.doWork(response, html);
                 }
             });
-            //req.on('end', this.onFinish());
+            req.on('end', this.onFinish);
         }
 
         public onFinish(args?: any) {

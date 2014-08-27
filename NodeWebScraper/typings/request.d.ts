@@ -95,6 +95,8 @@ declare module "request" {
             abort();
             destroy();
             toJSON(): string;
+
+            on(action: string, func: any);
         }
 
         export interface CookieJar {
