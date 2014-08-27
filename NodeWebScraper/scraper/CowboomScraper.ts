@@ -9,11 +9,6 @@ import scraper = require('./WebScraper');
 
 export module Scraper {
 
-    
-    
-
-    
-
     export class SearchItem {
         private _price: string;
         private _name: string;
@@ -35,6 +30,7 @@ export module Scraper {
         }
 
         public doWork(response, html) {
+
             var $ = cheerio.load(html);
             var $productBlocks = $(html).find('.product-block');
             $productBlocks.each((i, productBlock) => {
@@ -47,7 +43,6 @@ export module Scraper {
 
         public onFinish(args) { }
     }
-
 }
 
 exports.CowboomScraper = Scraper.CowboomScraper;
