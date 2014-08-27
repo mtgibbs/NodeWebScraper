@@ -18,6 +18,9 @@ node_modules/
 [Oo]bj/
 tmp/
 
+*.js.map
+
+MehScraper.js
 CowboomScraper.js
 WebScraper.js
 
