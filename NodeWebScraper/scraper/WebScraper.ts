@@ -5,7 +5,7 @@ import request = require('request');
 export module Scraper {
     export class WebScraper {
 
-        private _targetUrl : string;
+        private _targetUrl: string;
 
         constructor(url) {
             this._targetUrl = url
@@ -24,7 +24,7 @@ export module Scraper {
             //req.on('end', this.onFinish());
         }
 
-        public onFinish(args? : any) {
+        public onFinish(args?: any) {
             throw new Error('Supposed to be abstract.  Not implemented in base class.');
         }
 

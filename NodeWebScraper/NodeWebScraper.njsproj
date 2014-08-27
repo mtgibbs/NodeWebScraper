@@ -34,7 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="package.json" />
-    <Content Include="README.md" />
     <Content Include="twitter.json" />
   </ItemGroup>
   <ItemGroup>
@@ -42,12 +41,12 @@
     <Folder Include="typings\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="scraper\CowboomScraper.ts" />
     <Compile Include="main.js" />
-    <Compile Include="scraper\WebScraper.ts" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="scraper\CowboomScraper.ts" />
     <TypeScriptCompile Include="scraper\MehScraper.ts" />
+    <TypeScriptCompile Include="scraper\WebScraper.ts" />
     <TypeScriptCompile Include="typings\form-data.d.ts" />
     <TypeScriptCompile Include="typings\node.d.ts" />
     <TypeScriptCompile Include="typings\request.d.ts" />
