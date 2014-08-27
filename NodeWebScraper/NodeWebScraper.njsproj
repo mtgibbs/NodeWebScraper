@@ -7,7 +7,7 @@
     <RootNamespace>NodeWebScraper</RootNamespace>
     <EnableTypeScript>true</EnableTypeScript>
     <TypeScriptSourceMap>true</TypeScriptSourceMap>
-    <TypeScriptModuleKind>amd</TypeScriptModuleKind>
+    <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -47,7 +47,7 @@
     <Compile Include="scraper\WebScraper.ts" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="scraper\MehScraper.ts" />
     <TypeScriptCompile Include="typings\form-data.d.ts" />
     <TypeScriptCompile Include="typings\node.d.ts" />
     <TypeScriptCompile Include="typings\request.d.ts" />

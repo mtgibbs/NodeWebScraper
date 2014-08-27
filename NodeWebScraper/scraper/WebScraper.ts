@@ -11,6 +11,10 @@ export module Scraper {
             this._targetUrl = url
         }
 
+        public getTargetUrl(): string {
+            return this._targetUrl;
+        }
+
         public scrape() {
             var req = request(this._targetUrl, (error, response, html) => {
                 if (!error) {
@@ -20,7 +24,7 @@ export module Scraper {
             //req.on('end', this.onFinish());
         }
 
-        public onFinish(args) {
+        public onFinish(args? : any) {
             throw new Error('Supposed to be abstract.  Not implemented in base class.');
         }
 

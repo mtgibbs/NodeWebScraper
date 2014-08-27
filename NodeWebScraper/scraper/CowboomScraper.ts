@@ -31,14 +31,22 @@ export module Scraper {
 
         public doWork(response, html) {
 
+            console.log('Cowboom results for [' + this.getTargetUrl() + ']');
+
             var $ = cheerio.load(html);
             var $productBlocks = $(html).find('.product-block');
             $productBlocks.each((i, productBlock) => {
                 var price = $(productBlock).find('div.pricing-grid').text();
-                var name = $(productBlock).find('h3.result-h3-grid > a');
+                var $a = $(productBlock).find('h3.result-h3-grid > a');
+                var name = $a.text();
+                var link = $a.attr('href');
 
-                console.log(name);
+                var searchItem = new SearchItem(name, link, price);
+
+                console.log(JSON.stringify(searchItem));
             });
+
+            console.log('----------------------------------------');
         }
 
         public onFinish(args) { }

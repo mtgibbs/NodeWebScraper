@@ -10,7 +10,6 @@
   "dependencies": {
     "cheerio": "^0.17.0",
     "express": "^3.16.7",
-    "request": "^2.40.0",
-    "typescript-require": "x"
+    "request": "^2.40.0"
   }
 }
