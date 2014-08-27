@@ -24,6 +24,8 @@ MehScraper.js
 CowboomScraper.js
 WebScraper.js
 
+*.suo
+
 # =========================
 # Operating System Files
 # =========================
@@ -36,7 +38,8 @@ WebScraper.js
 .LSOverride
 
 # Icon must ends with two \r.
-Icon
+Icon
+
 
 # Thumbnails
 ._*
