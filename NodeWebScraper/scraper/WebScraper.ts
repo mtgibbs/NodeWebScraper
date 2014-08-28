@@ -3,24 +3,34 @@
 import request = require('request');
 
 export module Scraper {
+
     export class WebScraper {
+        private _requestOptions: request.Options;
 
-        private _targetUrl: string;
+        constructor(targetUrl: string);
+        constructor(options: request.Options);
+        constructor(arg: any) {
 
-        constructor(url) {
-            this._targetUrl = url
+            switch (typeof arg) {
+                case 'string':
+                    this._requestOptions = { uri: arg };
+                    break;
+                default:
+                    this._requestOptions = arg;
+            }
         }
 
         public getTargetUrl(): string {
-            return this._targetUrl;
+            return this._requestOptions.uri;
         }
 
         public scrape() {
-            var req = request(this._targetUrl, (error, response, html) => {
+            var req = request(this._requestOptions.uri, this._requestOptions, (error, response, html) => {
                 if (!error) {
                     this.doWork(response, html);
                 }
             });
+
             req.on('end', this.onFinish);
         }
 
