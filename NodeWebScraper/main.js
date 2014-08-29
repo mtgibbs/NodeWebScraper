@@ -1,15 +1,16 @@
 ﻿var CowboomScraper = require('./scraper/CowboomScraper').Scraper.CowboomScraper;
 var MehScraper = require('./scraper/MehScraper').Scraper.MehScraper;
 
+var intervalSeconds = 5;
 var scrapers = [];
-scrapers.push(new CowboomScraper('ps4'));
+//scrapers.push(new CowboomScraper('ps4'));
 scrapers.push(new MehScraper());
 
 scrapers.forEach(function (scraper) {
     try {
         setInterval(function () {
             scraper.scrape();
-        }, 5000);
+        }, intervalSeconds * 1000);
     } catch (error) {
         // TODO: Need to find a logging library...
         console.log(error.message);
