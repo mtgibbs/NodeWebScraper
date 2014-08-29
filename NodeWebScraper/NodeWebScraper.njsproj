@@ -37,6 +37,7 @@
     <Content Include="twitter.json" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="twitter\" />
     <Folder Include="scraper\" />
     <Folder Include="typings\" />
   </ItemGroup>
@@ -47,9 +48,11 @@
     <TypeScriptCompile Include="scraper\CowboomScraper.ts" />
     <TypeScriptCompile Include="scraper\MehScraper.ts" />
     <TypeScriptCompile Include="scraper\WebScraper.ts" />
+    <TypeScriptCompile Include="twitter\TwitWrapper.ts" />
     <TypeScriptCompile Include="typings\form-data.d.ts" />
     <TypeScriptCompile Include="typings\node.d.ts" />
     <TypeScriptCompile Include="typings\request.d.ts" />
+    <TypeScriptCompile Include="typings\twit.d.ts" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
 </Project>
